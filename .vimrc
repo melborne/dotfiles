@@ -89,12 +89,15 @@ call pathogen#runtime_append_all_bundles()
 
 "Vundler
 filetype off
-set rtp+=~/dotfiles/vimfiles/vundle.git/
+set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/'
+Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/vimshell'
+Bundle 'Shougo/neocomplcache'
+Bundle 'thinca/vim-quickrun'
 
-filetype indent plugin on
+filetype plugin indent on
 
 
 "kaoriya vimrc, gvimrcを読まない
@@ -487,7 +490,7 @@ endif
 " Unite
 let g:unite_enable_start_insert=1
 let mapleader=","
-"nnoremap <silent> <Leader>r :<C-u>Unite file_mru<CR>
+nnoremap <silent> <Leader>r :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
 nnoremap <silent> <Leader>t :<C-u>Unite -input=**/ file<CR>
 "nnoremap <silent> <D-t> :<C-u>Unite -input=**/ file<CR> #it open library
